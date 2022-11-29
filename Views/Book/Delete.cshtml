@@ -1,0 +1,35 @@
+﻿@model AdoUsingCRUDOperation.DAL.Book
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+<h3>Do you want to Delete ?</h3>
+
+@using (Html.BeginForm())
+{
+    <div class="mb-3">
+        <label>Book Id</label>
+        @Html.DisplayFor(model=>model.Id)
+    </div>
+    <div class="mb-3">
+        <label>Book Name</label>
+        @Html.DisplayFor(model=>model.Name)
+    </div>
+    <div class="mb-3">
+        <label>Price</label>
+        @Html.DisplayFor(model=>model.Price)
+    </div>
+    <div class="mb-3">
+        <label>Auther</label>
+        @Html.DisplayFor(model=>model.Author)
+    </div>
+    <div class="mb-3">
+        <label>Publishar</label>
+        @Html.DisplayFor(model=>model.Publishar)
+    </div>
+    <div class="mb-3">
+        <input type="submit" value="Delete" class="btn btn-outline-danger" />
+    </div>
+}
+

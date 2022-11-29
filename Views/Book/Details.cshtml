@@ -1,0 +1,32 @@
+﻿@model AdoUsingCRUDOperation.DAL.Book
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<h1>View Book</h1>
+
+<div class="mb-3">
+    <label>Book Id</label>
+    @Html.DisplayFor(model=>model.Id)
+</div>
+<div class="mb-3">
+    <label>Book Name</label>
+    @Html.DisplayFor(model=>model.Name)
+</div>
+<div class="mb-3">
+    <label>Price</label>
+    @Html.DisplayFor(model=>model.Price)
+</div>
+<div class="mb-3">
+    <label>Author</label>
+    @Html.DisplayFor(model=>model.Author)
+</div>
+<div class="mb-3">
+    <label>Publisher</label>
+    @Html.DisplayFor(model=>model.Publishar)
+</div>
+<div class="mb-3">
+    @Html.ActionLink("Back to List","BookController","Book")
+</div>
+

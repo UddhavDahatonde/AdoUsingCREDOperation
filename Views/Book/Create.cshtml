@@ -1,0 +1,32 @@
+﻿@model AdoUsingCRUDOperation.DAL.Book
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<h3>Add New Book</h3>
+
+@using (Html.BeginForm())
+{
+    <div class="mb-3">
+        <label>Book Name</label>
+        @Html.TextBoxFor(model=>model.Name)
+    </div>
+    <div class="mb-3">
+        <label>Price</label>
+        @Html.TextBoxFor(model=>model.Price)
+    </div>
+    <div class="mb-3">
+        <label>Auther</label>
+        @Html.TextBoxFor(model=>model.Author)
+    </div>
+    <div class="mb-3">
+        <label>Publisher</label>
+        @Html.TextBoxFor(model=>model.Publishar)
+    </div>
+    <div class="mb-3">
+        <input type="submit" value="Save" class="btn btn-outline-primary" />
+    </div>
+}
+
+

@@ -1,0 +1,25 @@
+﻿@model AdoUsingCRUDOperation.DAL.Mobile
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+@using (Html.BeginForm())
+{
+    <div class="mb-3">
+        <label>Book Id</label>
+        @Html.TextBoxFor(model=>model.id,new { @readonly = "readonly" })
+    </div>
+    <div class="mb-3">
+        <label>Mobile Name</label>
+        @Html.TextBoxFor(model=>model.Mobile_Name)
+    </div>
+    <div class="mb-3">
+        <label>Price</label>
+        @Html.TextBoxFor(model=>model.Price)
+    </div>
+    <div class="mb-3">
+        <input type="submit" value="Update" class="btn btn-outline-primary" />
+    </div>
+}

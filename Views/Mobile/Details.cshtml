@@ -1,0 +1,22 @@
+﻿@model AdoUsingCRUDOperation.DAL.Mobile
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<div class="mb-3">
+    <label>Id</label>
+    @Html.DisplayFor(model=>model.id)
+</div>
+<div class="mb-3">
+    <label>Mobile Name</label>
+    @Html.DisplayFor(model=>model.Mobile_Name)
+</div>
+<div class="mb-3">
+    <label>Price</label>
+    @Html.DisplayFor(model=>model.Price)
+</div>
+
+<div class="mb-3">
+    @Html.ActionLink("Back to List","MobileController","Mobile")
+</div>

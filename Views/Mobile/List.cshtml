@@ -1,0 +1,35 @@
+﻿@using AdoUsingCRUDOperation.DAL
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>Mobile Info</h1>
+<p>
+    @Html.ActionLink("Add","create","Mobile")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>id</th>
+        <th>Mobile Name</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    @foreach (Mobile item in ViewBag.mobilelist)
+    {
+        <tr>
+            <td>@item.id</td>
+            <td>@item.Mobile_Name</td>
+            <td>@item.Price</td>
+            <td>
+                @Html.ActionLink("Edit","Edit",new {@id=item.id}) |
+                @Html.ActionLink("Delete","Delete",new {@id=item.id}) |
+                @Html.ActionLink("View","Details",new {@id=item.id})
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+

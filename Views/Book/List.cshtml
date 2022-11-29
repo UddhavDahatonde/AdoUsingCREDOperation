@@ -1,0 +1,35 @@
+﻿@using AdoUsingCRUDOperation.DAL
+
+@{
+    ViewData["Title"] = "List";
+}
+<p>
+    @Html.ActionLink("Add Book","Create","Book")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>Book Id</th>
+        <th>Book Name</th>
+        <th>Book Price</th>
+        <th>Book Author</th>
+        <th>Book Publishar</th>
+        <th>Action</th>
+    </tr>
+    @foreach (Book item in ViewBag.Books)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Author</td>
+            <td>@item.Publishar</td>
+            <td>
+                @Html.ActionLink("Edit","Edit",new {@id=item.Id}) |
+                @Html.ActionLink("Delete","Delete",new {@id=item.Id}) |
+                @Html.ActionLink("View","Details",new {@id=item.Id})
+            </td>
+        </tr>
+    }
+</table>
+
+
